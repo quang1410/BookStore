@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookStore.GuestPage"
+             Title="Guest Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="cartBtn" Text="Cart" Clicked="cartBtn_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.png"  />
+
+            <Label x:Name="userName" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"/>
+
+            <ListView x:Name="avaiBooks" ItemSelected="avaiBooks_ItemSelected" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding title}" ImageSource="{Binding img}" Detail="{Binding price}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

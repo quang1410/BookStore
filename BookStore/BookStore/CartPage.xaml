@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookStore.CartPage"
+             Title="Giỏ hàng">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstCart" ItemSelected="lstCart_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding img}" Text="{Binding title}" Detail="{Binding price}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label x:Name="amount" FontSize="Large" FontAttributes="Bold" Padding="30"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

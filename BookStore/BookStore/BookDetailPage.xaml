@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookStore.BookDetailPage"
+             Title="Chi tiết">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="bookImg" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+
+                <Label x:Name="booktt" Text="Tên sách:" Grid.Row="1" Grid.Column="0"
+                       FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Label x:Name="bookTitle" Grid.Row="1" Grid.Column="1"  
+                       FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label x:Name="price" Text="Giá: " Grid.Row="2" Grid.Column="0" 
+                       FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="End"/>
+                <Label x:Name="bookPrice" Grid.Row="2" Grid.Column="1" 
+                       FontSize="Large" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Button Text="Sửa" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" 
+                        x:Name="editBtn" Clicked="editBtn_Clicked"
+                        BackgroundColor="#088da5" FontSize="Large" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+                <Button Text="Xóa" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"  
+                        x:Name="delBtn" Clicked="delBtn_Clicked" BackgroundColor="Red" FontSize="Large" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

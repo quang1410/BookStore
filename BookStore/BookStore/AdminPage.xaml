@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookStore.AdminPage"
+             Title="Admin Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="addBtn" Text="Thêm sách" Clicked="addBtn_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo.png"  />
+
+            <Label x:Name="userName" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+
+            <ListView x:Name="avaiBooks" ItemSelected="avaiBooks_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding img}" Text="{Binding title}" Detail="{Binding price}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
